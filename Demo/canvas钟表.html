@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>钟表2d</title>
+	<style id="css">
+		*{margin:0;padding:0;list-style:none;}
+		#wrap{width:200px;height:200px;border:2px solid #000;margin:100px auto;border-radius:50%;position:relative;}
+		#wrap ul{height:200px;position:relative;}
+		#wrap ul li{width:2px;position:absolute;left:99px;height:6px;top:0;background:#000;-webkit-transform-origin:center 100px;transform-origin:center 100px;-moz-transform-origin:center 100px;}
+		#wrap ul li:nth-of-type(5n+1){height:12px;}
+		#icon{height:20px;width:20px;background:#000;position:absolute;top:90px;left:90px;border-radius:50%;}
+		#hour{width:6px;height:45px;background:#000;position:absolute;top:55px;left:97px;-webkit-transform-origin:bottom;transform-origin:bottom;}
+		#min{width:4px;height:65px;background:#999; position:absolute;left:98px;top:35px;-webkit-transform-origin:bottom;transform-origin:bottom;-moz-transform-origin:bottom;}
+		#sec{width:2px;height:80px;background:red; position:absolute;left:99px;top:20px;-webkit-transform-origin:bottom;transform-origin:bottom;-moz-transform-origin:bottom;}
+	</style>
+	<script>
+	window.onload=function(){
+		var oWrap=document.getElementById('wrap');
+		var oList=document.getElementById('list');
+		var oHour=document.getElementById('hour');
+		var oMin=document.getElementById('min');
+		var oSec=document.getElementById('sec');
+		var oIco=document.getElementById('ico');
+		var oCss=document.getElementById('css');
+		var aLi='';
+		var sCss='';
+		for(var i=0;i<60;i++){
+			
+			sCss+="#wrap ul li:nth-of-type("+(i+1)+"){-webkit-transform:rotate("+i*6+"deg);transform:rotate("+i*6+"deg);-moz-transform:rotate("+i*6+"deg);}";
+			/*sCss+="#wrap ul li:nth-of-type("+(i+1)+"){ -webkit-transform:rotate("+i*6+"deg);}";*/
+			aLi+='<li></li>';
+		};
+		oList.innerHTML+=aLi;
+		oCss.innerHTML+=sCss;
+		getTime();
+		setInterval(getTime,1000)
+		function getTime(){
+			var oDate=new Date();
+			var iSec=oDate.getSeconds();
+			var iMin=oDate.getMinutes()+iSec/60;
+			var iHour=oDate.getHours()+iMin/60;
+			oSec.style.WebkitTransform="rotate("+iSec*6+"deg)";
+			oSec.style.transform="rotate("+iSec*6+"deg)";
+			oMin.style.WebkitTransform="rotate("+iMin*6+"deg)";
+			oMin.style.transform="rotate("+iMin*6+"deg)";
+			oHour.style.WebkitTransform="rotate("+iHour*30+"deg)";
+			oHour.style.transform="rotate("+iHour*30+"deg)";
+		};
+	};
+	</script>
+</head>
+
+<body>
+	<div id="wrap">
+		<ul id="list">
+		 	
+		</ul>
+		<div id="hour"></div>
+		<div id="min"></div>
+		<div id="sec"></div>
+		<div id="icon"></div>
+	</div>
+		
+</body>
+</html>

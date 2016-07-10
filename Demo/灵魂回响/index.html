@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>灵魂回响-冯晓杰</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    function echoo(a, b, c, d, e) {
+        var oUl1 = document.getElementById(a);
+        var aLi1 = oUl1.getElementsByTagName(b);
+        var oUl2 = document.getElementById(c);
+        var aLi2 = oUl2.getElementsByTagName(d);
+        for (var i = 0; i < aLi1.length; i++) {
+            aLi1[i].index = i;
+            aLi1[i].onmouseover = function() {
+                for (var j = 0; j < aLi1.length; j++) {
+                    aLi1[j].className = '';
+                    aLi2[j].style.display = 'none';
+                }
+                this.className = e;
+                aLi2[this.index].style.display = 'block';
+            }
+        }
+    }
+
+    window.onload = function() {
+        echoo('ul1', 'li', 'ul2', 'li', 'ul1li');
+        echoo('ul3', 'a', 'ul4', 'li', 'ul3li');
+        echoo('ul5', 'li', 'ul6', 'li', 'ul5li')
+    }
+    </script>
+</head>
+
+<body>
+    <div class="whole-box">
+        <div class="top-box">
+            <div class="header-box">
+                <div class="logol">
+                    <img src="img/logol.png" height="36" width="99" alt="">
+                </div>
+                <div class="right-box">
+                    <ul class="nav-box">
+                        <li><a href="#"><b></b>畅游全游戏</a></li>
+                        <li><a href="#"><b></b>畅游全服务</a></li>
+                        <li><a href="#"><b></b>客服</a></li>
+                        <div>
+                            <p class="p1"><a href="#"><i></i><span>畅游+</span></a></p>
+                            <p class="p2"><a href="#"><i></i><span>充值</span></a></p>
+                            <p class="p3"><a href="#"><i></i><span>注册</span></a></p>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 灵魂回响 -->
+        <div class="nav clearfix">
+            <div class="echo">
+                <a href="#"><img src="img/logo.gif" height="100px" width="190px" alt=""></a>
+            </div>
+            <div class="nav-menu clearfix">
+                <div class="div1">
+                    <a href="#"></a>
+                </div>
+                <div class="div0">
+                    <div class="div01">
+                        <p class="p1"><a href="#"><b></b>游戏新闻</a></p>
+                        <p class="p2"><a href="#"><b></b>官方公告</a></p>
+                    </div>
+                </div>
+                <div class="div2">
+                    <a href="#"></a>
+                </div>
+                <div class="div2">
+                    <a href="#"></a>
+                </div>
+                <div class="div2">
+                    <a href="#"></a>
+                </div>
+                <div class="div2">
+                    <a href="#"></a>
+                </div>
+                <div class="div2">
+                    <a href="#"></a>
+                </div>
+                <div class="div2">
+                    <a href="#"></a>
+                </div>
+                <div class="div3">
+                    <a href="#"></a>
+                </div>
+            </div>
+        </div>
+        <!-- 游戏下载 -->
+        <div class="content">
+            <div class="box1 clearfix">
+                <div class="download">
+                    <div class="former clearfix">
+                        <div class="btn1">
+                            <a href="#" title="游戏下载"></a>
+                        </div>
+                        <div class="btn2">
+                            <a href="#" title="帐号注册"></a>
+                        </div>
+                        <div class="btn3">
+                            <a href="#" title="账号充值"></a>
+                        </div>
+                        <div class="btn4">
+                            <a href="#" title="兑换中心"></a>
+                        </div>
+                        <div class="btn5">
+                            <a href="#" title="新手指南"></a>
+                        </div>
+                    </div>
+                    <div class="latter">
+                        <ul class="ul1 clearfix" id="ul1">
+                            <li class="ul1li"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul class="ul2" id="ul2">
+                            <li class="ul2li">
+                                <a href="#"><img src="img/main_a1 (1).jpg" height="303" width="616" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/main_a1 (2).jpg" height="303" width="616" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/main_a1 (3).jpg" height="303" width="616" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/main_a1 (4).jpg" height="303" width="616" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/main_a1 (5).jpg" height="303" width="616" alt=""></a>
+                            </li>
+                        </ul>
+                        <a href="#" class="guanfang"><i></i>官方</a>
+                        <a href="#" class="meiti"><i></i>媒体</a>
+                    </div>
+                </div>
+                <div class="down-right">
+                    <div class="part1">
+                        <p class="p1">电信一区<a href="#">【元素殿堂】</a>欢迎进驻！</p>
+                        <p class="p2">网通一区<a href="#">【雷霆之怒】</a>欢迎进驻！</p>
+                    </div>
+                    <div class="part2">
+                        <div class="part21 clearfix">
+                            <p class="pleft">距离你上次访问有<a href="#" class="a0">200</a>条更新<i></i>
+                                <span>关注:</span>
+                                <a href="#" class="a1"></a>
+                                <a href="#" class="a2"></a>
+                                <a href="#" class="a3"></a>
+                            </p>
+                        </div>
+                        <div class="part22">
+                            <ul class="ul3 clearfix" id="ul3">
+                                <li><a href="#" class="ul3li">综合</a></li>
+                                <li><a href="#">新闻</a></li>
+                                <li><a href="#">公告</a></li>
+                                <li><a href="#">媒体</a></li>
+                            </ul>
+                            <ul class="ul4" id="ul4">
+                                <li class="ul4li">
+                                    <div class="li48">
+                                        <p>4月8日大版开启 新职业术士魔神天降</p>
+                                    </div>
+                                    <div class="news">
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><b>更多信息></b></a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li48">
+                                        <p>4月8日大版开启 新职业术士魔神天降</p>
+                                    </div>
+                                    <div class="news">
+                                        <p><a href="#"><span>【新闻】两大满级副本</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><b>更多信息></b></a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li48">
+                                        <p>4月8日大版开启 新职业术士魔神天降</p>
+                                    </div>
+                                    <div class="news">
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><b>更多信息></b></a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="li48">
+                                        <p>4月8日大版开启 新职业术士魔神天降</p>
+                                    </div>
+                                    <div class="news">
+                                        <p><a href="#"><span>【新闻】两大满级副本</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><span>【新闻】两大满级副本特色揭秘 终极BOSS曝光</span><i>03/24</i></a></p>
+                                        <p><a href="#"><b>更多信息></b></a></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="haoli">
+                <ul>
+                    <li>
+                        <a href="#"><img src="img/haoli1.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/haoli2.jpg" height="130" width="242" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/haoli3.jpg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/haoli4.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix div3">
+                <div class="div3l">
+                    <ul class="ul5 clearfix" id="ul5">
+                        <li class="ul5li">
+                            <a href="javascript:;" class="ul5a1"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ul5a2"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ul5a3"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ul5a4"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ul5a5"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="ul5a6"></a>
+                        </li>
+                    </ul>
+                    <ul class="ul6" id="ul6">
+                        <li class="ul6li">
+                            <a href="#"><img src="img/ul61.jpg" height="287" width="656" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/ul62.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/ul63.jpg" height="287" width="656" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/ul64.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/ul65.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/ul66.jpg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="div3r">
+                    <h4 class="d3h4">活动中心</h4>
+                    <div class="d3rp">
+                        <a href="#"><img src="img/1.jpg" alt=""></a>
+                        <p class="clearfix">
+                            <b>女武神的秘宝</b>
+                            <i>共7,294,712人关注</i>
+                        </p>
+                    </div>
+                    <ul class="uld3">
+                        <li><a href="#">神谕者的成长礼</a><span>进行中</span></li>
+                        <li><a href="#">神谕者的成长礼</a><span>进行中</span></li>
+                        <li><a href="#">神谕者的成长礼</a><span>进行中</span></li>
+                        <li><a href="#">神谕者的成长礼</a><span>进行中</span></li>
+                        <li><a href="#">神谕者的成长礼</a><span>进行中</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="div4">
+                <div class="d4l">
+                    <div class="d4l1">
+                        <h4 class="d4h4">快捷入口</h4>
+                        <div class="d41text">
+                            <p><a href="#">.账号管理</a><a href="#">.兑换中心</a></p>
+                            <p><a href="#">.账号安全</a><a href="#">.畅游知道</a></p>
+                            <p><a href="#">.BUG提交</a><a href="#">.客户端FAQ</a></p>
+                            <p><a href="#">.玩家社区</a><a href="#">.加速器下载</a></p>
+                        </div>
+                    </div>
+                    <div class="d4l2">
+                        <a href="#" class="d4l2a1"><img src="img/main_a3_1.jpg" alt=""></a>
+                        <a href="#" class="d4l2a2"></a>
+                        <a href="#" class="d4l2a3"></a>
+                    </div>
+                    <div class="media">
+                        <a href="#">媒体合作专区</a>
+                    </div>
+                    <div class="d4l3">
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="d4r">
+                    <div class="d4rf clearfix">
+                        <div class="d4rf1">
+                            <h4 class="d4rf1h4">玩家交流</h4>
+                            <ul class="ul7">
+                                <li class="ul7li"><a href="#">玩家攻略</a></li>
+                                <li><a href="#">论坛热帖</a></li>
+                                <li><a href="#">社区精华</a></li>
+                            </ul>
+                            <div class="inmore"><a href="#">更多信息</a></div>
+                            <div class="gong clearfix">
+                                <div class="gongpic">
+                                    <a href="#"><img src="img/wj.jpg" alt=""></a>
+                                </div>
+                                <ul class="gongul">
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="d4rf2">
+                            <h4 class="d4rf2h4">游戏资料</h4>
+                            <div class="d4rf21">
+                                <div class="pio clearfix">
+                                    <p class="pi">新手入门<i></i></p>
+                                    <p class="po">
+                                        <a href="#">注册账号</a> |
+                                        <a href="#">下载游戏</a> |
+                                        <a href="#">登陆游戏</a>
+                                    </p>
+                                </div>
+                                <div class="pio clearfix">
+                                    <p class="pi">新手入门<i></i></p>
+                                    <p class="po">
+                                        <a href="#">注册账号</a> |
+                                        <a href="#">下载游戏</a> |
+                                        <a href="#">登陆游戏</a>
+                                    </p>
+                                </div>
+                                <div class="pio clearfix">
+                                    <p class="pi">新手入门<i></i></p>
+                                    <p class="po">
+                                        <a href="#">注册账号</a> |
+                                        <a href="#">下载游戏</a> |
+                                        <a href="#">登陆游戏</a>
+                                    </p>
+                                </div>
+                                <div class="pio clearfix">
+                                    <p class="pi">新手入门<i></i></p>
+                                    <p class="po">
+                                        <a href="#">注册账号</a> |
+                                        <a href="#">下载游戏</a> |
+                                        <a href="#">登陆游戏</a>
+                                    </p>
+                                </div>
+                                <div class="entry"><a href="#">进入资料站</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d4rl clearfix">
+                        <div class="d4rf1">
+                            <h4 class="d4rf1h4">玩家交流</h4>
+                            <ul class="ul7">
+                                <li class="ul7li"><a href="#">玩家攻略</a></li>
+                                <li><a href="#">论坛热帖</a></li>
+                                <li><a href="#">社区精华</a></li>
+                            </ul>
+                            <div class="inmore"><a href="#">更多信息</a></div>
+                            <div class="gong clearfix">
+                                <div class="gongpic">
+                                    <a href="#"><img src="img/wj.jpg" alt=""></a>
+                                </div>
+                                <ul class="gongul">
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                    <li><a href="#">·生活技能之烹饪技能详细解读</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="d4rl2">
+                            <h4 class="d4rl2h4">视觉欣赏</h4>
+                            <ul class="ul8 clearfix">
+                                <li class="ul8li"><a href="#">游戏视频</a></li>
+                                <li><a href="#">游戏截图</a></li>
+                            </ul>
+                            <div class="inmore"><a href="#">更多信息</a></div>
+                            <div class="ul8pic">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="img/1 (1).jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="img/1 (1).jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="img/1 (1).jpg" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="img/1 (1).jpg" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notice">
+                <p class="title">健康游戏公告</p>
+                <p class="words">
+                    抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。
+                    <br> 本游戏适合18周岁以上的成年人用户，未满18周岁的未成年用户请在家长的监督下进行游戏。
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="foo">
+                <a href="#" class="foo1"></a>
+                <a href="#" class="foo2"></a>
+                <div class="footext">
+                    <p>北京畅游时代数码技术有限公司版权所有 Copyright © 2011 ChangYou.com Limited. All rights reserved. 法律声明 | 联系我们
+                        <br> 京网文[2011]0260-093号 | 京ICP证：070525号
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>爱奇艺导航</title>
+    <link rel="stylesheet" href="css/css.css">
+    <!-- bg0.jpg -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- bg0.jpg -->
+    <script src="js/jquery-1.7.2.js"></script>
+    <script>
+    function show(json) {
+        var oList = $('#serCon');
+        $(oList).html('');
+        for (var i = 0; i < json.data.length; i++) {
+            var oLi = $('<li>');
+            var aA = $('<a>');
+            $(aA).attr('href', 'http://so.iqiyi.com/so/q_' + json.data[i].name + '?sr=' + Math.random());
+            $(aA).attr('target', '_blank');
+            aA.html(json.data[i].name)
+            aA.appendTo(oLi);
+            $(oList).append($(oLi));
+        }
+    }
+    </script>
+    <script>
+    $(function() {
+        $('.inbox').mouseover(function() {
+            $(this).css({
+                'border-radius': '2px 0 0 0',
+                'border': '1px solid #699f00',
+                'background': 'white'
+            });
+        });
+        //mouseout的问题：离开子项同时离开了父项，mouseleave没有这个问题
+        $('.inbox').mouseleave(function() {
+            $(this).css({
+                'border-radius': '2px 0 0 2px',
+                'border': '1px solid #e8e8e8',
+                'background': '#e3e3e3'
+            });
+            $('.serCon').css('display', 'none');
+        });
+
+        $('.inbox input').focus(function() {
+            $('.inbox').css({
+                'border-radius': '2px 0 0 0',
+                'border': '1px solid #699f00',
+                'background': 'white'
+            });
+            $(this).val('');
+            $('.serCon').css('display', 'block')
+        });
+        //JSONP
+        $('.inbox input').keyup(function() {
+            $('.serCon').css('display', 'block');
+            var oScript = $('<script>');
+            $(oScript).attr('src', 'http://suggest.video.iqiyi.com/?key=' + $(this).val() + '&callback=show');
+            $(oScript).appendTo($('head'));
+        });
+        //事件委托
+        $('.serCon').delegate('li', 'mouseover', function() {
+            $(this).css('background', 'white');
+
+        });
+        $('.serCon').delegate('li', 'mouseout', function() {
+            $(this).css('background', '#e3e3e3');
+        });
+        //搜全站
+        $('.searchBtn').click(function() {
+            if ($('.inbox input').val()) {
+                window.open('http://so.iqiyi.com/so/q_' + $('.inbox input').val() + '?sr=' + Math.random(), '_blank')
+            };
+        });
+        //选项卡
+        $('#ul_btn li').mouseover(function() {
+            $('#ul_btn li').removeClass('yanse');
+            $('#ul_con li').stop().animate({
+                'opacity': 0
+            });
+            $(this).addClass('yanse');
+
+            $('#ul_con li').eq($(this).index()).stop().animate({
+                'opacity': 1
+            });
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div class="top" id="top">
+        <div class="top-navR">
+            <div class="top-nav clearfix">
+                <div class="logo">
+                    <a href="#"></a>
+                </div>
+                <div class="running">
+                    <a href="#"></a>
+                </div>
+                <div class="search clearfix">
+                    <div class="inbox">
+                        <input type="text" value="可以JSOP跨域哦！试一试~~" id="inpt" />
+                        <ul class="serCon" id="serCon">
+                        </ul>
+                    </div>
+                    <div class="searchBtn">
+                        <input type="button" class="shou">
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <ul>
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">注册</a></li>
+                        <li><a href="#">开通VIP</a></li>
+                        <li class="xiazai"><a href="#" class="xiaZai"><b></b><em></em>上传<p></p></a></li>
+                        <li class="xiazai"><a href="#" class="xiaZai">下载<b></b></a></li>
+                        <li class="xiazai"><a href="#">消息</a>
+                            <p></p>
+                        </li>
+                        <li class="xiazai"><a href="#">播放记录</a>
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="img" id="tu">
+            <ul id="ul_con">
+                <li class="curr" style="background:url(images/img1.jpg);"></li>
+                <li style="background:url(images/img2.jpg);"></li>
+                <li style="background:url(images/img3.jpg);"></li>
+                <li style="background:url(images/img4.jpg);"></li>
+                <li style="background:url(images/img5.jpg);"></li>
+                <li style="background:url(images/img6.jpg);"></li>
+                <li style="background:url(images/img7.jpg);"></li>
+                <li style="background:url(images/img8.jpg);"></li>
+                <li style="background:url(images/img9.jpg);"></li>
+                <li style="background:url(images/img10.jpg);"></li>
+            </ul>
+        </div>
+        <div class="nav-bg" id="nav">
+            <div class="navigation">
+                <ul id="ul_btn">
+                    <li class="yanse"><a href="#">余罪2: 卧底兄弟团整装齐发</a></li>
+                    <li><a href="#">狭路：跌宕起伏的战地爱情</a></li>
+                    <li><a href="#">跑男：宋小宝杠上黑牛李晨</a></li>
+                    <li><a href="#">陈白露：张天爱身陷爱情迷雾</a></li>
+                    <li><a href="#">废柴兄弟4：无疯不起浪</a></li>
+                    <li><a href="#">大张伟薛之谦现场“啪啪啪”</a></li>
+                    <li><a href="#">超能快递侠：草根遇上超能力</a></li>
+                    <li><a href="#">好先生：江疏影倒追孙红雷</a></li>
+                    <li><a href="#">我们的法则：四爷遭亚鹏质疑</a></li>
+                    <li><a href="#">上半年内地院线票房排行榜</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="top-bottom">
+            <div class="aiqiyi">
+                <img src="img/aiqiyi-1.png" alt="">
+                <span>悦 享   品   质</span>
+            </div>
+            <div class="aiqiyi-naV">
+                <ul class="nav-a1">
+                    <li><a href="#">娱乐</a></li>
+                    <li><a href="#">体育</a></li>
+                    <li><a href="#">资讯</a></li>
+                </ul>
+                <ul class="nav-a2">
+                    <li><a href="#">电源</a></li>
+                    <li><a href="#">花片</a></li>
+                    <li><a href="#">微电影</a></li>
+                    <li><a href="#">电视剧</a></li>
+                    <li><a href="#">综艺</a></li>
+                    <li><a href="#">脱口秀</a></li>
+                </ul>
+                <ul class="nav-a3">
+                    <li><a href="#">动漫</a></li>
+                    <li><a href="#">生活</a></li>
+                    <li><a href="#">少儿</a></li>
+                    <li><a href="#">母婴</a></li>
+                    <li><a href="#">游戏</a></li>
+                    <li><a href="#">健康</a></li>
+                </ul>
+                <ul class="nav-a4">
+                    <li><a href="#">音乐</a></li>
+                    <li><a href="#">搞笑</a></li>
+                    <li><a href="#">时尚</a></li>
+                    <li><a href="#">原创</a></li>
+                    <li><a href="#">斿游</a></li>
+                    <li><a href="#">拍客</a></li>
+                </ul>
+                <ul class="nav-a5">
+                    <li><a href="#">电源</a></li>
+                    <li><a href="#">花片</a></li>
+                    <li><a href="#">微电影</a></li>
+                    <li><a href="#">电视剧</a></li>
+                    <li><a href="#">综艺</a></li>
+                    <li><a href="#">脱口秀</a></li>
+                </ul>
+                <ul class="nav-a6">
+                    <li><a href="#">风云榜</a></li>
+                    <li><a href="#">工艺</a></li>
+                    <li><a href="#">全网影视</a></li>
+                    <li><a href="#">直播中心</a></li>
+                    <li><a href="#">爱奇艺搜索</a></li>
+                    <li><a href="#">爱奇艺出品</a></li>
+                </ul>
+                <ul class="nav-a7">
+                    <li><a href="#">PPS游戏</a></li>
+                    <li><a href="#">PPS奇秀</a></li>
+                    <li><a href="#">应用商店</a></li>
+                    <li><a href="#"><span>VIP</span>会员</a></li>
+                    <li><a href="#">爱奇艺商城<b></b></a></li>
+                    <li><a href="#">个人中心<em></em></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

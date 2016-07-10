@@ -1,0 +1,510 @@
+﻿.top {
+    width: 100%;
+    height: 590px;
+    background: #000;
+    margin: 0 auto;
+    min-width: 1200px;
+}
+
+.top .top-navR {
+    width: 100%;
+    height: 60px;
+    min-width: 1200px;
+    background-color: #222;
+    padding-top: 4px;
+    border-bottom: 2px solid #292929
+}
+
+.top .top-navR .top-nav {
+    width: 1180px;
+    height: 45px;
+    background: #222;
+    margin: 0 auto;
+    position: relative;
+}
+
+.top .top-navR .top-nav .logo {
+    width: 105px;
+    float: left;
+}
+
+.top .top-navR .top-nav .logo a {
+    display: inline-block;
+    width: 105px;
+    height: 50px;
+    background: url(../images/iqiyi-logo.png) no-repeat;
+}
+
+.top .top-navR .top-nav .running {
+    float: left;
+}
+
+.top .top-navR .top-nav .running a {
+    width: 97px;
+    height: 48px;
+    display: inline-block;
+    margin: 8px 0 0 30px;
+    background: url(../images/running.png) no-repeat;
+}
+
+.top .top-navR .top-nav .search {
+    width: 470px;
+    height: 38px;
+    float: left;
+    margin-left: 30px;
+}
+
+.top .top-navR .top-nav .search .inbox {
+    width: 350px;
+    height: 36px;
+    background: #e3e3e3;
+    border: 1px solid #e8e8e8;
+    float: left;
+    margin-top: 8px;
+    border-radius: 2px 0 0 2px;
+    position: relative;
+}
+
+.top .top-navR .top-nav .search .inbox .serCon {
+    position: absolute;
+    top: 36px;
+    left: -1px;
+    border: 1px solid #699f00;
+    border-top: none;
+    z-index: 1;
+    display: none;
+}
+
+.top .top-navR .top-nav .search .inbox .serCon li {
+    width: 350px;
+    height: 30px;
+    background: #e3e3e3;
+    line-height: 30px;
+    text-indent: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.top .top-navR .top-nav .search .inbox .serCon li a {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+}
+
+.top .top-navR .top-nav .search .inbox input {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-indent: 9px;
+    color: #666;
+    background: transparent;
+    outline: none;
+    padding: 8px 0;
+    border: 0;
+}
+
+.top .top-navR .top-nav .search .searchBtn {
+    width: 110px;
+    height: 38px;
+    float: left;
+    opacity: 1;
+    cursor: pointer;
+    background: url(../images/topNav-v2.png) no-repeat 0 0;
+    margin-top: 8px;
+    border-radius: 0 2px 2px 0
+}
+
+.top .top-navR .top-nav .search .searchBtn input {
+    outline: none;
+    background: transparent;
+    border: 0;
+}
+
+.top .top-navR .top-nav .nav-right {
+    width: 425px;
+    height: 32px;
+    float: right;
+    /*background:blue;*/
+    ;
+    margin-top: 8px;
+}
+
+.top .top-navR .top-nav .nav-right ul li {
+    height: 32px;
+    float: left;
+    margin: 0 10px;
+}
+
+.top .top-navR .top-nav .nav-right ul li a {
+    height: 32px;
+    float: left;
+    display: block;
+    line-height: 32px;
+    font-size: 14px;
+    color: #999;
+}
+
+.top .top-navR .top-nav .nav-right ul li a:hover {
+    color: #699f00;
+}
+
+.top .top-navR .top-nav .nav-right ul .xiazai {
+    position: relative;
+}
+
+.top .top-navR .top-nav .nav-right .xiazai .xiaZai {
+    padding-left: 12px;
+}
+
+.top .top-navR .top-nav .nav-right .xiazai .xiaZai em {
+    height: 12px;
+    width: 14px;
+    background: url(../img/nav-upload1.png) no-repeat 0 0;
+    position: absolute;
+    top: 11px;
+    left: -2px;
+    opacity: 0.6;
+}
+
+.top .top-navR .top-nav .nav-right .xiazai .xiaZai:hover em {
+    background: url(../img/nav-upload-green.png);
+}
+
+.top .top-navR .top-nav .nav-right .xiazai .xiaZai b {
+    height: 7px;
+    width: 7px;
+    background: url(../img/yuanqiu-1.png) no-repeat 0 0;
+    position: absolute;
+    top: 1px;
+    right: -2px;
+}
+
+.top .top-navR .top-nav .nav-right ul .xiazai p {
+    border: 5px solid transparent;
+    border-top: 5px solid #999;
+    position: absolute;
+    top: 14px;
+    right: -11px;
+}
+
+.top .top-navR .top-nav .nav-right ul .xiazai:hover p {
+    border-top: 5px solid #699f00;
+}
+
+.top .img {
+    width: 100%;
+    height: 410px;
+}
+
+.top .img ul {
+    position: relative;
+    width: 100%;
+    height: 410px;
+}
+
+.top .img ul li {
+    width: 100%;
+    height: 410px;
+    _display: none;
+    opacity: 1;
+    /*全部隐藏*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top .img ul li.curr {
+    opacity: 1;
+    /*显示为块级元素*/
+}
+
+.top .nav-bg {
+    width: 247px;
+    height: 371px;
+    background: url(../images/bg.png);
+    position: absolute;
+    /*绝对定位*/
+    top: 80px;
+    right: 20px;
+}
+
+.top .nav-bg .navigation {
+    width: 212px;
+    height: 340px;
+    margin: 18px 16px;
+    /*上下 左右*/
+    border-radius: 8px;
+    /*圆角边框*/
+    color: #888;
+    overflow: hidden;
+    /*超出隐藏*/
+}
+
+.top .nav-bg .navigation ul li {
+    width: 212px;
+    height: 34px;
+    line-height: 34px;
+    /*行高*/
+    padding-left: 8px;
+    /*左内边距*/
+}
+
+.top .nav-bg .navigation ul li a {
+    color: #ccc;
+    font-size: 15px;
+}
+
+.top .nav-bg .navigation ul li.yanse {
+    background: #699f00;
+    color: #fff;
+}
+
+
+/*background:#ff00ff;*/
+
+.top .top-bottom {
+    width: 978px;
+    height: 88px;
+    /*min-width:1200px;*/
+    border-radius: 10px;
+    border: 1px solid #699f00;
+    margin: 12px auto;
+}
+
+.top .top-bottom .aiqiyi {
+    width: 131px;
+    height: 88px;
+    float: left;
+}
+
+.top .top-bottom .aiqiyi img {
+    margin-left: 18px;
+    float: left;
+}
+
+.top .top-bottom .aiqiyi span {
+    font-size: 12px;
+    color: #ccc;
+    float: left;
+    display: block;
+    margin-left: 18px;
+    margin-top: 5px;
+}
+
+.top .top-bottom .aiqiyi-naV {
+    width: 847px;
+    height: 75px;
+    /*background:#ccc;*/
+    margin-top: 7px;
+    float: left;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a1 {
+    width: 56px;
+    height: 75px;
+    /*background:#111;*/
+    float: left;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a1 li {
+    width: 56px;
+    height: 25px;
+    /*background:#222;*/
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a1 li a {
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    line-height: 25px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a1 li a:hover {
+    color: #688a00;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a2 {
+    width: 96px;
+    height: 75px;
+    background: url(../img/xian-1.png) no-repeat 0 0;
+    float: left;
+    padding-left: 17px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a2 li {
+    width: 48px;
+    height: 25px;
+    float: left;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a2 li a {
+    font-size: 13px;
+    color: #fff;
+    text-align: left;
+    display: block;
+    line-height: 25px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a2 li a:hover {
+    color: #688a00;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a3 {
+    width: 78px;
+    height: 75px;
+    background: url(../img/xian-1.png) no-repeat 0 0;
+    float: left;
+    padding-left: 17px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a3 li {
+    width: 39px;
+    height: 25px;
+    float: left;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a3 li a {
+    font-size: 13px;
+    color: #fff;
+    text-align: left;
+    display: block;
+    line-height: 25px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a3 li a:hover {
+    color: #688a00;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a4 {
+    width: 78px;
+    height: 75px;
+    background: url(../img/xian-1.png) no-repeat 0 0;
+    float: left;
+    padding-left: 17px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a4 li {
+    width: 39px;
+    height: 25px;
+    float: left;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a4 li a {
+    font-size: 13px;
+    color: #fff;
+    text-align: left;
+    display: block;
+    line-height: 25px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a4 li a:hover {
+    color: #688a00;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a5 {
+    width: 96px;
+    height: 75px;
+    background: url(../img/xian-1.png) no-repeat 0 0;
+    float: left;
+    padding-left: 17px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a5 li {
+    width: 48px;
+    height: 25px;
+    float: left;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a5 li a {
+    font-size: 13px;
+    color: #fff;
+    text-align: left;
+    display: block;
+    line-height: 25px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a5 li a:hover {
+    color: #688a00;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a6 {
+    width: 168px;
+    height: 75px;
+    background: url(../img/xian-1.png) no-repeat 0 0;
+    float: left;
+    padding-left: 17px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a6 li {
+    width: 84px;
+    height: 25px;
+    float: left;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a6 li a {
+    font-size: 13px;
+    color: #fff;
+    text-align: left;
+    display: block;
+    line-height: 25px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a6 li a:hover {
+    color: #688a00;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a7 {
+    width: 173px;
+    height: 75px;
+    background: url(../img/xian-1.png) no-repeat 0 0;
+    float: left;
+    padding-left: 17px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a7 li {
+    width: 84px;
+    height: 25px;
+    float: left;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a7 li a {
+    font-size: 13px;
+    color: #fff;
+    text-align: left;
+    display: block;
+    line-height: 25px;
+    position: relative;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a7 li span {
+    font-size: 13px;
+    color: #e6cc3d;
+    line-height: 25px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a7 li a b {
+    width: 7px;
+    height: 7px;
+    background: url(../img/yuanqiu-1.png)no-repeat 0 0;
+    position: absolute;
+    top: -1px;
+    right: 11px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a7 li a em {
+    width: 7px;
+    height: 7px;
+    background: url(../img/yuanqiu-1.png)no-repeat 0 0;
+    position: absolute;
+    top: 0;
+    right: 28px;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a7 li span:hover {
+    color: #688a00;
+}
+
+.top .top-bottom .aiqiyi-naV .nav-a7 li a:hover {
+    color: #688a00;
+}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Allen's resume</title>
+    <link rel="stylesheet" href="./css/base.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="iconfont/iconfont.css" type="text/css">
+    <script type="text/javascript" src="./JS/move.js"></script>
+    <script type="text/javascript" src="JS/doMove.js"></script>
+    <script type="text/javascript" src="JS/fnCover.js"></script>
+    <script type="text/javascript" src="./JS/main.js"></script>
+</head>
+
+<body>
+    <!-- Loading -->
+    <div class="loading" id="loading">
+        <div class="loading-top" id="loadingTop"></div>
+        <div class="loading-inner" id="loadingInner">
+            <div class="loading-animal" id="loadingAnimal"></div>
+            <div class="loading-line" id="loadingLine"></div>
+        </div>
+        <div class="loading-bottom" id="loadingBottom"></div>
+    </div>
+    <!-- 固定定位 右边圆圈进度状态 -->
+    <div>
+        <ul class="icon_lists" id="iconfont">
+            <li>
+                <i class="icon iconfont color">&#xe621;</i>
+                <div>HOME</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#xe651;</i>
+                <div>PORTFOLIO</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#xe651;</i>
+                <div>SKILLS</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#xe651;</i>
+                <div>ABOUT</div>
+            </li>
+            <li>
+                <i class="icon iconfont">&#xe651;</i>
+                <div>CONTACT</div>
+            </li>
+        </ul>
+    </div>
+    <!-- Cover -->
+    <div id="cover" class="cover">
+        <img src="img/bg1.jpg" />
+        <div class="top-menu">
+            <div class="logol">
+                <img src="img/logo1.png" alt="logol">
+            </div>
+            <div class="nav" id="nav">
+                <ul>
+                    <li>HOME</li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">SKILLS</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- sub-nav -->
+        <div class="sub-nav clearfix" id="subnav">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="round-pic">
+                            <img src="img/pic1 (1).jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>个人习作及DEMO</h3>
+                            <p>包括整站作品和练习时的DEMO</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="round-pic">
+                            <img src="img/pic1 (2).jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3 style="margin-left:-80px">技能</h3>
+                            <p>1.HTML/CSS</p>
+                            <p>2.JavaScript</p>
+                            <p>3.HTML5/CSS3</p>
+                            <p>4.工具</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="round-pic">
+                            <img src="img/pic1 (4).jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>ABOUT ME</h3>
+                            <p>简历是昨天与现在的我,而热爱前端的我依然行走在技术修炼的道路上...</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="round-pic">
+                            <img src="img/pic1 (3).jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h3>联系我</h3>
+                            <p>热爱前端渴望成长希望与优秀的人一起做事，如果觉得我还不错可以我！</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="myPortfolio" id="myPortfolio">
+        <div>
+            <img src="img/contentbg.jpg" alt="portfolio" style="width:100%;height:100%;">
+        </div>
+        <div class="myPortCont content">
+            <h2 class="h2">MY PORTFOLIO</h2>
+            <hr class="hr">
+            <div class="works-intem clearfix">
+                <div style="border-right:2px solid #616E7C;box-sizing:border-box">
+                    <p class="p1" id="btn_project">Projects</p>
+                </div>
+                <div>
+                    <p class="p2" id="btn_demo">Demo</p>
+                </div>
+            </div>
+            <div class="work-contents clearfix">
+                <ul class="projectitems clearfix" id="project">
+                    <li class="li0">
+                        <img src="images/iqiyi.PNG" alt="">
+                        <div class="show">
+                            <span class="imgArea">
+                                <a title="查看" href="Demo/iqiyi/index.html" target="_blank">查看</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="li1">
+                        <img src="images/捕获.PNG" alt="">
+                        <div class="show">
+                            <span class="imgArea">
+								<a title="查看" href="Demo/婚纱摄影/index.html" target="_blank">查看</a>
+							</span>
+                        </div>
+                    </li>
+                    <li class="li2">
+                        <img src="images/捕获2.PNG" alt="">
+                        <div class="show">
+                            <span class="imgArea">
+								<a title="查看" href="Demo/灵魂回响/index.html" target="_blank">查看</a>
+							</span>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="demoitems clearfix" id="demo">
+                    <li class="li1">
+                        <img src="images/cover3.PNG" alt="">
+                        <div class="show">
+                            <span class="imgArea">
+								<a title="查看" href="Demo/canvas钟表.html" target="_blank">查看</a>
+							</span>
+                        </div>
+                    </li>
+                    <li class="li2">
+                        <img src="images/cover4.PNG" alt="">
+                        <div class="show">
+                            <span class="imgArea">
+								<a title="查看" href="Demo/3d幻灯片.html" target="_blank">查看</a>
+							</span>
+                        </div>
+                    </li>
+                    <li class="li3">
+                        <img src="images/cover5.PNG" alt="">
+                        <div class="show">
+                            <span class="imgArea">
+								<a title="查看" href="Demo/paperfolding.html" target="_blank">查看</a>
+							</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mySkills content">
+        <div>
+            <img src="img/contentbg.jpg" alt="portfolio" style="width:100%;height:100%;">
+        </div>
+        <div class="mySkillCont content">
+            <h2 class="h2">MY SKILLS</h2>
+            <hr class="hr">
+            <div class="skillDetails" id="skillDetails">
+                <canvas style="float:left;" id="Canvas1" width='300' height='200'></canvas>
+                <canvas style="float:left;" id="Canvas2" width='300' height='200'></canvas>
+                <canvas style="float:left;" id="Canvas3" width='300' height='200'></canvas>
+                <br>
+                <canvas style="float:left;" id="Canvas4" width='300' height='150'></canvas>
+                <canvas style="float:left;" id="Canvas5" width='300' height='150'></canvas>
+                <canvas style="float:left;" id="Canvas6" width='300' height='150'></canvas>
+            </div>
+        </div>
+        <div style="skillists">
+            <span class="skilllist1">XHTML/CSS2</span>
+            <span class="skilllist2">JavaScript</span>
+            <span class="skilllist3">CSS3</span>
+            <span class="skilllist4">HTML5</span>
+            <span class="skilllist5">jQuery</span>
+            <span class="skilllist6">Angular</span>
+        </div>
+    </div>
+    <div class="aboutMe content">
+        <div>
+            <img src="img/contentbg.jpg" alt="portfolio" style="width:100%;height:100%;">
+        </div>
+        <div class="aboutMeCont content">
+            <h2 class="h2">ABOUT ME</h2>
+            <hr class="hr">
+            <div class="character">
+                <img src="img/pic1 (4).jpg" alt="">
+            </div>
+            <div class="introduction">
+                <p class="job">求职意向:前端开发</p>
+                <p class="info">
+                    <span>生日：1992.8</span>
+                    <span>毕业学校：河北地质大学华信学院</span>
+                    <span>专业：计算机科学与技术</span>
+                </p>
+                <p class="somewords">一只当代的90后，热爱前端喜欢Coding,希望一直Coding下去。自从进入前端领域就一直在努力学习，不安于在知识广度和深度上的欠缺，也明白程序员是一个需要不断学习不断提升自我的职业。</p>
+            </div>
+        </div>
+    </div>
+    <div class="contactMe content">
+        <div>
+            <img src="img/contentbg.jpg" alt="portfolio" style="width:100%;height:100%;">
+        </div>
+        <div class="contactMeCont content">
+            <h2 class="h2">CONTACT ME</h2>
+            <hr class="hr">
+            <div class="contact clearfix">
+                <div class="mail">
+                    <img src="images/mail2.jpg" alt="">
+                    <p>fxj52111@163.com</p>
+                </div>
+                <div class="tel">
+                    <img src="images/tel1.jpg" alt="">
+                    <p>18141904515</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

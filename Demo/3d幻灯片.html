@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9css3 3d幻灯片</title>
+	<style id="css">
+	*{padding:0;margin:0;list-style:none;}
+	.wrap{width:800px;margin:100px auto 0;}
+	#picList{width:800px;height:360px;-webkit-perspective:1600px;}
+	#picList li{width:20px;height:360px;position:relative;-webkit-transform-style:preserve-3d;-webkit-transform-origin:center center -180px;float:left;transition:500ms;}
+	#picList a{height:100%;width:100%;position:absolute;top:0;left:0;}
+	#picList li a:nth-of-type(1){background: url(3d幻灯片/1.jpg) no-repeat;}
+	#picList li a:nth-of-type(2){background: url(3d幻灯片/2.jpg) no-repeat;-webkit-transform-origin:bottom;-webkit-transform:rotateX(90deg);top:-360px;}
+	#picList li a:nth-of-type(3){background: url(3d幻灯片/3.jpg) no-repeat;-webkit-transform:translateZ(-360px) rotateX(180deg);}
+	#picList li a:nth-of-type(4){background: url(3d幻灯片/4.jpg) no-repeat;-webkit-transform-origin:top;-webkit-transform:rotateX(-90deg);top:360px;}
+	#picList li span{position:absolute;width:360px;height:360px;background:transparent;}
+	#btns{float:right;padding:10px 0;}
+	#picList li span:nth-of-type(1){-webkit-transform-origin:left;-webkit-transform:rotateY(90deg);left:0;}
+	#picList li span:nth-of-type(2){-webkit-transform-origin:right;-webkit-transform:rotateY(270deg);right:0;}
+	#btns li{width:40px;height:40px;background:#000;color:#fff;border-radius:50%;font:italic 30px/40px Arial;float:left;text-align:center;margin:0 5px;}
+	#btns .active{background:#f60;}
+	</style>
+	<script>
+	window.onload=function(){
+		var oPicList=document.getElementById("picList");
+		var oCss=document.getElementById("css");
+		var aBtns=document.getElementById("btns").getElementsByTagName("li");
+		var aLi=null;
+		var sLi="";
+		var sCss="";
+		var iLiw=20;
+		var iZindex=0;
+		var iLength=oPicList.clientWidth/iLiw;
+		for(var i=0;i<iLength;i++){
+			i>iLength/2?iZindex--:iZindex++;
+			sLi+='<li><a href="#"></a><a href="#"></a><a href="#"></a><a href="#"></a><span></span><span></span></li>';
+			sCss+="#picList li:nth-of-type("+(i+1)+") a{background-position:-"+i*20+"px 0}";
+			sCss+="#picList li:nth-of-type("+(i+1)+"){z-index:"+iZindex+"}";
+		};
+		oPicList.innerHTML=sLi;
+		oCss.innerHTML+=sCss;
+		aLi=oPicList.children;
+		for(var i=0;i<aBtns.length;i++){
+			(function(a){
+				aBtns[a].onclick=function(){
+					for(var i=0;i<aLi.length;i++){
+						aLi[i].style.transition="0.5s "+i*20+"ms";
+						aLi[i].style.WebkitTransform="rotateX(-"+a*90+"deg)";
+					};
+					for(var i=0;i<aBtns.length;i++){
+						aBtns[i].className="";
+					};
+					this.className="active";
+				};
+			})(i)
+		};
+	};
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<ul id="picList">
+			<li>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<span></span>
+				<span></span>
+			</li>
+		</ul>
+		<ol id="btns">
+			<li class="active">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ol>
+	</div>
+</body>
+</html>

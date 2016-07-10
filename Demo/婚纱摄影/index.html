@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    window.onload = function() {
+        var oDot = document.getElementById('dot');
+        var oAa = oDot.getElementsByTagName('a')
+        var oBpic = document.getElementById('bpic')
+        var oAaa = oBpic.getElementsByTagName('a')
+
+        for (var i = 0; i < oAa.length; i++) {
+            oAa[i].index = i;
+            oAa[i].onmouseover = function() {
+                for (var j = 0; j < oAa.length; j++) {
+                    oAa[j].className = '';
+                    oAaa[j].style.display = 'none';
+
+                }
+                this.className = 'dota';
+                oAaa[this.index].style.display = 'block';
+            };
+        }
+
+        var oBox=document.getElementById('venpic');
+        var aBtn_left=oBox.getElementsByTagName('i')[0];
+        var aBtn_right=oBox.getElementsByTagName('span')[0];
+        var oPic=document.getElementById('vpic');
+        var aLi_oPic=oPic.children;
+        var oBall=document.getElementById('ball');
+        var aLi_oBall=oBall.children;
+        var num=0
+        //红球
+        for(var i=0;i<aLi_oBall.length;i++){
+            (function(index){
+                aLi_oBall[index].onmouseover=function(){
+                    num=index;
+                    tab(num);
+                };
+            })(i);
+        };
+        //图片
+        function tab(a){
+            for(var i=0;i<aLi_oPic.length;i++){
+                aLi_oPic[i].className="";
+                aLi_oBall[i].className="";
+            };
+            aLi_oPic[a].className="active";
+            aLi_oBall[a].className="show";
+            tab2(a);
+        };
+        function next(){
+            num++;
+            if(num>4){
+                num=0;
+            };
+            tab(num);
+        };
+        aBtn_right.onclick=function(){
+            next();
+        };
+        aBtn_left.onclick=function(){
+            num--;
+            if(num<0){
+                num=4;
+            };
+            tab(num);
+        };
+        var timer=setInterval(next,2000);
+        
+        oBox.onmouseover=function(){
+            clearInterval(timer);
+        };
+        oBox.onmouseout=function(){
+            timer=setInterval(next,2000);
+        };
+    };
+
+
+
+    
+    </script>
+</head>
+
+<body>
+    <div class="top w100">
+        <div class="topcont wi mi">
+            <a href="#" class="atop"><img src="img/logo.gif" alt=""></a>
+        </div>
+    </div>
+    <div class="nav w100">
+        <div class="navcon mi wi clearfix">
+            <ul class="navul clearfix">
+                <li><a href="#" class="homepage">首页</a></li>
+                <li><a href="#">影楼报价</a></li>
+                <li><a href="#">作品展示</a></li>
+                <li><a href="#">场馆介绍</a></li>
+                <li><a href="#">客片欣赏</a></li>
+                <li><a href="#">积分商城</a></li>
+                <li><a href="#">官方汇款</a></li>
+                <li><a href="#">网络预约</a></li>
+                <li><a href="#">官方微博</a></li>
+            </ul>
+            <div class="collect">
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+    <div class="banner wi mi">
+        <div class="bpic" id="bpic">
+            <a href="#" class="ba1"><img src="img/pic1.jpg" alt=""></a>
+            <a href="#" class="ba2"><img src="img/pic2.jpg" alt=""></a>
+            <a href="#" class="ba2"><img src="img/pic3.jpg" alt=""></a>
+            <a href="#" class="ba2"><img src="img/pic4.jpg" alt=""></a>
+        </div>
+        <div class="dot clearfix" id="dot">
+            <a href="javascript:" class="dota"></a>
+            <a href="javascript:"></a>
+            <a href="javascript:"></a>
+            <a href="javascript:"></a>
+        </div>
+    </div>
+    <div class="online wi mi">
+        <div class="r">
+            <a href="#"><img src="img/online1.gif" alt=""></a>
+            <a href="#"><img src="img/online2.gif" alt=""></a>
+            <a href="#"><img src="img/online3.gif" alt=""></a>
+            <a href="#"><img src="img/online4.gif" alt=""></a>
+        </div>
+    </div>
+    <div class="public wi mi">
+        <div class="pic_act">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="img/public1.jpg" width="310px" height="310px" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/public2.jpg" width="310px" height="310px" alt=""></a>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/public3.jpg" width="310px" height="310px" alt=""></a>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="venues wi mi clearfix">
+        <div class="v">
+            <a href="#"><img src="img/hometitle_03.gif" alt=""></a>
+        </div>
+        <div class="venpic clearfix" id="venpic">
+        <ul class="vpic" id="vpic">
+            <li class="active">
+                <img src="img/bigpic.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/guest3.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/bigpic.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/guest3.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/guest5.JPG" alt="">
+            </li>
+        </ul>
+        <ul class="ball" id="ball">
+            <li class="show"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <i><</i>
+        <span>></span>
+    </div>
+        <div class="vmright clearfix">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="img/venu1.jpg" height="195" width="300" alt=""><span>洛丽塔</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/venu2.jpg" height="195" width="300" alt=""><span>克莉丝汀</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/venu3.jpg" height="195" width="300" alt=""><span>夏宫</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/venu4.jpg" height="195" width="300" alt=""><span>伯爵庄园</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="guest wi mi clearfix">
+        <div class="g">
+            <a href="#"><img src="img/hometitle_08.gif" alt=""></a>
+        </div>
+        <div class="gpic">
+            <ul class="clearfix">
+                <li>
+                    <a href="#"><img src="img/guest1.jpg" height="360" width="215" alt=""><span>客片1</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/guest2.jpg" height="360" width="215" alt=""><span>客片2</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/guest3.jpg" height="360" width="215" alt=""><span>客片3</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/guest4.jpg" height="360" width="215" alt=""><span>客片4</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/guest5.JPG" height="360" width="215" alt=""><span>客片</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/guest6.jpg" height="360" width="215" alt=""><span>青春的回忆</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/guest7.jpg" height="360" width="215" alt=""><span>明星</span></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/guest8.jpg" height="360" width="215" alt=""><span>追忆</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="service wi mi clearfix">
+        <div class="ser clearfix">
+            <a href="#"><img src="img/hometitle_11.gif" alt=""></a>
+            <div class="price">
+                <a href="#">>>更多报价</a>
+            </div>
+        </div>
+        <div class="ser2 clearfix">
+            <div class="serleft">
+                <a href="#" class="ser2a1"><img src="img/ser1.jpg" alt=""><span>限量套系，超值团购，每日仅限3套</span></a>
+                <p><a href="#">RMB:4999</a></p>
+            </div>
+            <div class="sertext">
+                <h4>蒙娜丽莎“克里斯汀会所</h4>
+                <p>
+                    1995年，中国和新加坡金尼影像合力打造的蒙娜丽莎在西安创立，凭借专业先进的摄影技术和贴心周到的服务，孕育出“美丽感动一生”的企业文化，成为婚纱摄影行业的领航者。短短几...
+                    <br> 北京婚纱摄影请选择蒙娜丽莎，贵族的品质和实在的价格让您不会错过它。如果你浏览了所有婚纱照您才会发现，蒙娜丽莎才是您一直在寻找的感觉！
+                    <br> 到的服务，孕育出“美丽感动一生”的企业文化，成为婚纱摄影行业的领航者。短短几北京婚纱摄影请选择蒙娜丽莎，贵族的品质和实在的价格让您不会错过它。如果你浏览了所有婚纱照您才会发现，蒙娜丽莎才是您一直在寻找的感觉！
+                </p>
+                <a href="#">>>详情介绍</a>
+            </div>
+        </div>
+    </div>
+    <div class="jifen wi mi clearfix">
+        <div class="jif">
+            <a href="#"><img src="img/hometitle_14.gif" alt=""></a>
+        </div>
+        <div class="clearfix">
+            <div class="jifpic">
+                <ul>
+                    <li>
+                        <a href="#"><img src="img/jif1.jpg" alt=""><span>Chanel 香奈儿 No5女士香水 50ml</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/jif2.jpg" alt=""><span>九阳（joyoung）豆浆机DJ12B-A11</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/jif3.jpg" alt=""><span>Anna sui安娜苏许愿精灵香水30ml</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/jif4.jpg" alt=""><span>北京移动充值卡100元</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/jif5.jpg" alt=""><span>飞利浦（Philips）HQ6070 锋驰系列双刀头电动剃须刀</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="img/jif6.jpg" alt=""><span>飞利浦 (Philips) HD7450/20 咖啡机</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="jifr clearfix">
+                <ul>
+                    <li><a href="#">新郎拍摄婚纱照注意事项</a></li>
+                    <li><a href="#">时下正流行 复古怀旧婚纱照</a></li>
+                    <li><a href="#">北京婚纱摄影小编告诉你拍完婚纱照后新娘如何卸妆</a></li>
+                    <li><a href="#">怎样拍摄凸显娴雅美资的韩式婚纱照</a></li>
+                    <li><a href="#">让新娘从头美到脚的婚纱照姿势大全</a></li>
+                    <li><a href="#">新郎拍婚纱照时需要注意的事项有哪些</a></li>
+                    <li><a href="#">北京婚纱婚纱摄影分享四大经典唯美新娘婚纱照造型</a></li>
+                    <li><a href="#">新娘必看 新娘装搭配谨防误区</a></li>
+                    <li><a href="#">小小改变 让结婚证件照更美丽</a></li>
+                    <li><a href="#">北京婚纱影楼告诉你新娘旗袍婚鞋怎么搭配更美</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="link wi mi clearfix">
+        <div class="lin clearfix">
+            <a href="#"><img src="img/hometitle_24.gif" alt=""></a>
+            <div class="qq"><a href="#">友情链接QQ:787835815</a></div>
+        </div>
+        <div class="linkw">
+            <a href="#">芝麻开门</a>
+            <a href="#">北京蒙娜丽莎摄影</a>
+            <a href="#">北京儿童摄影</a>
+            <a href="#">北京妈妈网</a>
+            <a href="#">北京婚博会</a>
+            <a href="#">武汉婚纱摄影</a>
+        </div>
+    </div>
+    <div class="footf">
+        <div class="fcon wi mi clearfix">
+            <div class="fconl">
+                <ul>
+                    <li>
+                        <a href="#" class="fitem">蒙娜丽莎/主页</a>
+                        <a href="#">北京婚纱摄影网</a>
+                        <a href="#">关于蒙娜丽莎</a>
+                        <a href="#">联系我们</a>
+                        <a href="#">婚纱客片欣赏</a>
+                    </li>
+                    <li>
+                        <a href="#" class="fitem">作品展示</a>
+                        <a href="#">外景婚纱作品</a>
+                        <a href="#">内景婚纱作品</a>
+                        <a href="#">高端婚纱摄影</a>
+                        <a href="#">写真客片分享</a>
+                    </li>
+                    <li>
+                        <a href="#" class="fitem">新闻动态</a>
+                        <a href="#">最新优惠</a>
+                        <a href="#">最新动态</a>
+                        <a href="#">服务小贴士</a>
+                        <a href="#">官方汇款账号</a>
+                    </li>
+                    <li>
+                        <a href="#" class="fitem">SCENE场景介绍</a>
+                        <a href="#">内景婚纱照</a>
+                        <a href="#">外景婚纱照</a>
+                        <a href="#">外景区</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fconr">
+                <div class="ftel">
+                    <a href="#"><img src="img/footq_32.gif" alt=""></a>
+                    <a href="#"><img src="img/footq_34.gif" alt=""></a>
+                    <a href="#"><img src="img/footq_36.gif" alt=""></a>
+                    <a href="#"><img src="img/footq_39.gif" alt=""></a>
+                    <a href="#"><img src="img/footq_39.gif" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footl">
+        <a href="#">北京婚纱摄影</a>|
+        <a href="#">婚纱照展示</a>|
+        <a href="#">影楼报价</a>|
+        <a href="#">摄影动态</a>|
+        <a href="#">联系我们</a>
+        <br> 版权所有 © 2007-2012 北京蒙娜丽莎摄影有限公司 Map | Tag
+        <a href="#"><img src="img/pic1.gif" alt=""></a>
+        <br> 北京蒙娜丽莎唯一官网：http://www.mnls.com/
+        <a href="#">京公网安备11010102001544号</a> 京公网安备11010102001544号
+        <br> 热门推荐：北京婚纱摄影、北京婚纱影楼、婚纱照或婚纱摄影外景，尽在蒙娜丽莎！ 网站技术、SEO优化支持:
+        <a href="#">东辉创想</a>
+    </div>
+</body>
+
+</html>
